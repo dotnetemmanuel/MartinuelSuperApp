@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>ToDo List</h1>
-</body>
-<script src="script.js"></script>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>ToDo List</h1>
+    <div>
+      <ul id="todoList">
+
+      </ul>
+
+    </div>
+
+    <textarea id="textArea" placeholder="Description" cols="50" rows="4"></textarea>
+    <br><br>
+    <button onclick=addToList()>Save</button>
+    <br>
+    <br>
+    <div id="alert" style="display: none; color: red;">
+      Your task is empty
+    </div>
+  </body>
+  <script src="script.js"></script>
+
 </html>
