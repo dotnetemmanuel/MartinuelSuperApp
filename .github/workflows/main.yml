@@ -15,6 +15,7 @@ jobs:
           echo "Repository Name: ${{ github.repository }}"
           echo "Branch Name: ${{ github.ref_name }}"
   #build-console-project:
+  #COMMENT
     #runs-on: ubuntu-latest
     #steps:
       #- uses: actions/checkout@v4
