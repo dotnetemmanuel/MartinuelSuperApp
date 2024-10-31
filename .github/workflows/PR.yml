@@ -1,0 +1,13 @@
+name: PR Workflow
+
+on: 
+  pull_request:
+    types: [opened]
+
+jobs: 
+  log-PR:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - name: Log Pull Request
+        run: echo "Pull request done at $(date) by - ${{ github.actor }}" >> README.md
