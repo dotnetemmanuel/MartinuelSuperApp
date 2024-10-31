@@ -1,6 +1,9 @@
 name: Test workflow
 
-on: workflow_dispatch
+on: 
+  push:
+    paths:
+      - '**/*.cs*'
 
 jobs:
   print-repo-name:
