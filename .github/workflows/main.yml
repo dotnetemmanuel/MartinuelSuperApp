@@ -11,3 +11,14 @@ jobs:
         run:  |
           echo "Repository Name: ${{ github.repository }}"
           echo "Branch Name: ${{ github.ref_name }}"
+  build-console-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Console Project
+        run: dotnet new console --name todo
+      - name: Setup .net
+        uses: actions/setup-dotnet@v4.1.0
+        with:
+          dotnet-version: 9
+        
