@@ -8,4 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: RepoName
-        run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+        run:  |
+          echo "Repository Name: ${{ github.repository }}"
+          echo "Branch Name: ${{ github.ref_name }}"
