@@ -1,0 +1,20 @@
+name: csCounter
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  count-cs-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count .cs files
+        run: |
+          count=$(find . -type f -name "*.cs" | wc -l)
+          echo "Number of .cs files: $count"
+          echo "cs_file_count=$count" >> $GITHUB_ENV
+
+        
