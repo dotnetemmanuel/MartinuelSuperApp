@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v4
-      - name: Checkout main branch
-        run: git checkout main
+        with: 
+          ref: main
       - name: Pull latest changes
         run: git pull origin main
       - name: Log Pull Request
