@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v4
+      - name: Checkout main branch
+        run: git checkout main
+      - name: Pull latest changes
+        run: git pull origin main
       - name: Log Pull Request
         run: echo "Pull request done at $(date) by - ${{ github.actor }}" >> README.md
       - name: Commit and Push
